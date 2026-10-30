@@ -1,0 +1,12 @@
+# Render Blueprint configuration for VETRI AUTO CAR GARAGE
+services:
+  - type: web
+    name: vetri-auto-car-garage
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+
